@@ -11,9 +11,21 @@ int getSum(vector<int> &nums) {
     return sum;
 }
 
+
 int getAvarege(vector<int> &nums) {
     int sum = getSum(nums);
     return sum / nums.size();
+}
+
+int getMin(vector<int> &nums) {
+    int min = INT_MAX;
+    for (int num : nums) {
+        if (num < min) {
+            min = num;
+        }
+    }
+    return min;
+
 }
 
 int main() {
@@ -25,6 +37,9 @@ int main() {
 
     int avarege = getAvarege(nums);
     cout << avarege << endl;
+
+    int min = getMin(nums);
+    cout << min << endl;
 
     return 0;
 }
